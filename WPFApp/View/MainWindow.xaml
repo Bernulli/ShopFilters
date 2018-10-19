@@ -1,0 +1,67 @@
+﻿<Window x:Class="WPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFApp.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="825" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:MainWindowViewModel></local:MainWindowViewModel>
+    </Window.DataContext>
+
+    <Grid x:Name="MainGrid">
+        <Grid.Resources>
+            <DataTemplate x:Key="listTemplate">
+                <StackPanel Margin="5">
+                    <Image Width="100" Height="75" Source="{Binding Path=ImagePath}" />
+                    <TextBlock FontSize="16" Text="{Binding Path=Name}" />
+                </StackPanel>
+            </DataTemplate>
+
+            <!--<DataTemplate x:Key="expanderTemplate">
+                <StackPanel Margin="2">
+                    <Expander Header="Назва">
+                        <StackPanel>
+                            <CheckBox Content="{Binding Path=Name}"/>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </DataTemplate>-->
+
+            <Style TargetType="{x:Type ListBox}" x:Key="PhotoListBoxStyle">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ListBox}" >
+                            <WrapPanel Margin="15" IsItemsHost="True" Orientation="Horizontal" 
+                       VerticalAlignment="Top" HorizontalAlignment="Stretch" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="2"/>
+        
+        <StackPanel Margin="10">
+            <Expander x:Name="expanderListCompany" Grid.Column="0" Header="Company" Margin="5"
+                      Content="{Binding Path=Company}"/>
+            <Expander x:Name="expanderListName" Grid.Column="0" Header="Model" Margin="5"
+                      Content="{Binding Path=Name}"/>
+            <!--<Expander x:Name="expanderListPrice" Grid.Column="0" Header="Price" Margin="5"
+                      Content="{Binding Path=Price}"/>-->
+        </StackPanel>
+
+        <ListBox Grid.Column="2" x:Name="phonesList" 
+                 ItemTemplate="{StaticResource listTemplate}" 
+                 Style="{StaticResource PhotoListBoxStyle}"
+                 ItemsSource="{Binding Path=Phones}"/>
+
+    </Grid>
+</Window>

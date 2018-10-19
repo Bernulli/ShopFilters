@@ -1,0 +1,25 @@
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\bin\Debug\DBLibrary.dll.config
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\bin\Debug\DBLibrary.dll
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\bin\Debug\DBLibrary.pdb
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\bin\Debug\EntityFramework.dll
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\bin\Debug\EntityFramework.xml
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\obj\Debug\DBLibrary.dll
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\obj\Debug\DBLibrary.pdb
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\obj\Debug\DBLibrary.Migrations.first.resources
+c:\users\user\documents\visual studio 2017\Projects\ShopFilters\DBLibrary\obj\Debug\DBLibrary.csproj.GenerateResource.Cache
+D:\C#\Filters\wpf-shopfilters\DBLibrary\bin\Debug\DBLibrary.dll.config
+D:\C#\Filters\wpf-shopfilters\DBLibrary\bin\Debug\DBLibrary.dll
+D:\C#\Filters\wpf-shopfilters\DBLibrary\bin\Debug\DBLibrary.pdb
+D:\C#\Filters\wpf-shopfilters\DBLibrary\bin\Debug\EntityFramework.dll
+D:\C#\Filters\wpf-shopfilters\DBLibrary\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\Filters\wpf-shopfilters\DBLibrary\bin\Debug\EntityFramework.xml
+D:\C#\Filters\wpf-shopfilters\DBLibrary\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\Filters\wpf-shopfilters\DBLibrary\obj\Debug\DBLibrary.csproj.CoreCompileInputs.cache
+D:\C#\Filters\wpf-shopfilters\DBLibrary\obj\Debug\DBLibrary.csproj.CopyComplete
+D:\C#\Filters\wpf-shopfilters\DBLibrary\obj\Debug\DBLibrary.dll
+D:\C#\Filters\wpf-shopfilters\DBLibrary\obj\Debug\DBLibrary.pdb
+D:\C#\Filters\wpf-shopfilters\DBLibrary\obj\Debug\DBLibrary.Migrations.first.resources
+D:\C#\Filters\wpf-shopfilters\DBLibrary\obj\Debug\DBLibrary.csproj.GenerateResource.cache
+D:\C#\Filters\wpf-shopfilters\DBLibrary\obj\Debug\DBLibrary.csprojAssemblyReference.cache
