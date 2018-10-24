@@ -5,7 +5,6 @@ using System.Windows.Controls;
 using System.Data.Entity;
 using WPFApp.ViewModel;
 using System.Collections.Generic;
-using DBLibrary.EF.Models;
 
 namespace WPFApp.UIElements
 {
@@ -52,7 +51,7 @@ namespace WPFApp.UIElements
             }
         }
 
-        private static void Ch_UncheckedModel(object sender, RoutedEventArgs e)
+        public static void Ch_UncheckedModel(object sender, RoutedEventArgs e)
         {
             CheckBox ch = sender as CheckBox;
             ifNameChecked = false;
@@ -64,7 +63,7 @@ namespace WPFApp.UIElements
             }
         }
 
-        private static void Ch_CheckedModel(object sender, RoutedEventArgs e)
+        public static void Ch_CheckedModel(object sender, RoutedEventArgs e)
         {
             CheckBox ch = sender as CheckBox;
             ifNameChecked = true;
@@ -126,27 +125,6 @@ namespace WPFApp.UIElements
                 return expanderPanel;
             }
         }
-
-        //public static StackPanel CreatePriceCheckBox()
-        //{
-        //    using (ShopFilterEntity db = new ShopFilterEntity())
-        //    {
-        //        var phone = db.Phones.Select(n => n.Price).ToList();
-
-        //        StackPanel expanderPanel = new StackPanel();
-
-        //        foreach (var c in phone)
-        //        {
-        //            CheckBox ch = new CheckBox();
-        //            ch.Content = c.ToString();
-        //            //ch.Command = new MainWindowViewModel().Filter;
-        //            ch.Margin = new Thickness(5);
-        //            expanderPanel.Children.Add(ch);
-        //        }
-
-        //        return expanderPanel;
-        //    }
-        //}
         #endregion
     }
 }

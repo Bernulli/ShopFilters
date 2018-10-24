@@ -97,7 +97,7 @@ namespace WPFApp.ViewModel
                 CompanyFilterMethod(AddExpanders.whatCompanyChecked);
                 ModelFilterMethod(AddExpanders.whatModelChecked);
 
-                if (AddExpanders.whatCompanyChecked.Count > 0)
+                if (AddExpanders.whatCompanyChecked.Count > 0 && AddExpanders.whatModelChecked.Count == 0)
                 {
                     mw.expanderListName.Content = UpdateModelCheckboxes(AddExpanders.whatCompanyChecked);
                 }
@@ -108,7 +108,15 @@ namespace WPFApp.ViewModel
                 if (AddExpanders.whatCompanyChecked.Count > 0)
                 {
                     CompanyFilterMethod(AddExpanders.whatCompanyChecked);
-                    mw.expanderListName.Content = UpdateModelCheckboxes(AddExpanders.whatCompanyChecked);
+                    if (AddExpanders.whatModelChecked.Count > 0)
+                    {
+                        ModelFilterMethod(AddExpanders.whatModelChecked);
+                        mw.phonesList.ItemsSource = myList;
+                    }
+                    else
+                    {
+                        mw.expanderListName.Content = UpdateModelCheckboxes(AddExpanders.whatCompanyChecked);
+                    }
                     mw.phonesList.ItemsSource = myList;
                 }
                 else if (AddExpanders.whatCompanyChecked.Count == 0)
@@ -153,6 +161,10 @@ namespace WPFApp.ViewModel
                 {
                     CheckBox ch = new CheckBox();
                     ch.Content = item.Name;
+                    ch.Command = Filter;
+                    ch.Checked += AddExpanders.Ch_CheckedModel;
+                    ch.Unchecked += AddExpanders.Ch_UncheckedModel;
+                    ch.Tag = item.Name;
                     ch.Margin = new Thickness(5);
                     expanderPanel.Children.Add(ch);
                 }
